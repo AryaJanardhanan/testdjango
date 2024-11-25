@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+        BASE PAGE
+        {% endblock %}
+    </title>
+</head>
+<body>
+    <h3>This is our sample test page 
+    here you can check samples</h3>
+
+    <nav>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'login' %}">Login</a>
+        <a href="{% url 'items' %}">Items</a>
+    </nav>
+    
+    {% block content %}
+    <h1>Base page content</h1>
+    {% endblock %}
+</body>
+</html>
